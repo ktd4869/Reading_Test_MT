@@ -155,11 +155,12 @@
 			l.ladda('start');
 			var time = $('#time').text();
 			var result = answerMatch(Number(getUrlParam("beginArticle")));
+			var beginArticle=getUrlParam("beginArticle")
 			console.log(result);
 			if (result['correct'] == false) {
 				window.alert('Please answer all questions!');
 			} else {
-				window.location.href = "result.html?result=" + result['correct'] + "&time=" + time+ "&answerSet=" + result['answerSet'];
+				window.location.href = "result.html?result=" + result['correct'] + "&time=" + time+ "&answerSet=" + result['answerSet']+"&beginArticle="+beginArticle;
 			}
 			l.ladda('stop');
 			// Timeout example
