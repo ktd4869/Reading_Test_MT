@@ -125,6 +125,7 @@
 		});
 
 		var beginArticle = getUrlParam("beginArticle");
+		//console.log(beginArticle)
 		setTimer();
 	});
 
@@ -143,6 +144,7 @@
 		var answerTabStatus = $("#answerTabStatus");
 		answerTabStatus.attr("class", "tab");
 		answerTab.attr("href", "#answer" + type);
+		//console.log(type)
 		answerTab.click();
 	}
 
@@ -171,11 +173,13 @@
 	function initAnswer(type, index) {
 		//修改这里load里的内容改为http
 		$("#answer" + index).load("answerSheet/answerSheet_"+type+".html");
+		//console.log(index)
 	}
 
 	function initArticle(type, index) {
 		//修改这里load里的内容改为http
 		$("#article" + index).load("article/article"+type+".html");
+		//console.log(type)
 	}
 
 	function answerMatch(type) {
