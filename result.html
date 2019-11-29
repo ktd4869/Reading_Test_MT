@@ -48,6 +48,7 @@
                 </div>
             </div>
             <div style="text-align: center">
+				<h4 id="beginArticle" class="m-t-0 header-title"></h4>
                 <h4 id="time" class="m-t-0 header-title"></h4>
                 <h4 id="score" class="m-t-0 header-title"></h4>
                 <h4 id="result" class="m-t-0 header-title"></h4>
@@ -168,12 +169,14 @@
         //Pie graph data
         var result = Number(getUrlParam("result"));
         var time = getUrlParam("time");
+		var beginArticle = getUrlParam("beginArticle");
         var pielabels = ["CORRECT", "WRONG"];
         var datas = [result, 15 - result];
         var colors = ["green", "red"];
         var answerSet = getUrlParam('answerSet');
         pieChart("#pie-chart #pie-chart-container", pielabels, datas, colors);
-
+		
+		$("#beginArticle").text("Begin Article: " + beginArticle);
         $("#time").text("TIME USED: " + time + " S");
         $("#score").text("ACCURACY: "+result+"/15");
         var answerList = "";
